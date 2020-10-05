@@ -2,9 +2,6 @@
 = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
   = render "users/shared/error_messages", resource: resource
   .field
-    //= f.label :email
-    //%br/
-    //= f.email_field :email, autofocus: true, autocomplete: "email"
     .label 氏名
     = f.text_field :username, autofocus: true, autocomplete: "username", placeholder: '全角で入力。姓と名の間に１文字スペースあける。　　例）山田　太郎', maxlength: "16"
   .field
