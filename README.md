@@ -16,10 +16,12 @@
 |Column|Type|Options|
 |------|----|-------|
 |user_id|references|null:false, foreign_key:true|
-|postcode|integer|null:false|
 |prefecture|string|null:false|
 |city|string|null:false|
 |block|string|null:false|
+|new_prefecture|string||
+|new_city|string||
+|new_block|string||
 ### Association
 - belongs_to :user
 
