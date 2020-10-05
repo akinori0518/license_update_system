@@ -2,10 +2,8 @@
 ## Usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|family_name|string|null:false|
-|first_name|string|null:false|
-|password|string|null:false, unique:true|
-|license_number|integer|null:false, unique:true|
+|username|string|null:false|
+|password(license_number)|string|null:false, unique:true|
 ### Association
 - has_one :address, :dependent => :destroy
 - has_one :information, :dependent => :destroy
