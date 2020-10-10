@@ -7,9 +7,11 @@ class InformationsController < ApplicationController
     @information = Information.new(post_params)
 
     if @information.save
-      redirect_to root_path, notice: "連絡先を登録しました"
+      flash[:notice] = '連絡先を登録しました'
+      redirect_to root_path
     else
-      redirect_to new_information_path, notice: "未入力の項目があります"
+      flash[:notice] = '未入力の項目があります'
+      redirect_to new_information_path
     end
   end
 
