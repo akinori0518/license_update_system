@@ -21,7 +21,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
     session["devise.regist_data"][:user]["password"] = params[:user][:password]
     if @user.save
       sign_in(:user, @user)
-      redirect_to root_path
+      redirect_to informations_path
     else
       render :new
     end

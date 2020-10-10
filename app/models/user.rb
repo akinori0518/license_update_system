@@ -20,6 +20,10 @@ class User < ApplicationRecord
     end
   end
 
+  def will_save_change_to_email?
+  false
+  end
+
   #登録時にemailを不要とする
   def email_required?
     false

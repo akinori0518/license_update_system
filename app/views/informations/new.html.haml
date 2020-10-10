@@ -1,0 +1,12 @@
+= render 'header'
+
+.information
+  = form_with url: informations_path, model: @information, class: 'post_information_form', local: true do |f|
+    .form
+      .label Eメールアドレス
+      = f.email_field :email, placeholder: 'PC・携帯どちらでも可', class:"input-information"
+    .form
+      .label 電話番号
+      = f.text_field :phone_number, placeholder: "半角入力。ハイフンなし　例）08012345678", class:"input-information"
+    .actions
+      = f.submit "登録"
