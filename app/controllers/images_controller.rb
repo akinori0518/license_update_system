@@ -8,7 +8,7 @@ class ImagesController < ApplicationController
 
     if @image.save
       flash[:notice] = '連絡先を登録しました'
-      redirect_to root_path
+      redirect_to address_path(current_user.id)
     else
       flash[:notice] = '未入力の項目があります'
       redirect_to new_image_path
