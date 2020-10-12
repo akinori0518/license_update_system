@@ -4,7 +4,9 @@
   .label 現住所
   = @address.address
   .label 変更がない場合は「次へ」、ある場合は「変更する」をクリックしてください
-  .button 次へ
-  = link_to root_path
-  .button 変更する
-  = link_to edit_address_path
+  .button 
+  = link_to root_path do
+    次へ
+  .button
+  = link_to edit_address_path do
+    変更する
