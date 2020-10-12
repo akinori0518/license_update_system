@@ -1,0 +1,9 @@
+= render 'header'
+
+.image
+  = form_with url: images_path, model: @image, class: 'post_image_form', local: true do |f|
+    .form
+      .label 撮影から6ヶ月以内のデータを添付してください
+      = f.file_field :image, placeholder: 'PC・携帯どちらでも可', class:"input-information"
+    .actions
+      = f.submit "登録"
