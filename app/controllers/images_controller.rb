@@ -15,6 +15,19 @@ class ImagesController < ApplicationController
     end
   end
 
+  def edit
+    @image = Image.find_by(user_id: current_user.id)
+  end
+
+  def update
+    @image = Image.find_by(user_id: current_user.id)
+    if @image.update(post_params)
+      redirect_to root_path
+    else
+      redirect_to edit_image_path
+    end
+  end
+
 
   private
 

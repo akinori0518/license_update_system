@@ -12,7 +12,7 @@ class AddressesController < ApplicationController
 
   def update
     @address = Address.find_by(user_id: current_user.id)
-    if @address.update(address_params)
+    if @address.update(post_params)
       redirect_to new_image_path
     else
       redirect_to edit_address_path
@@ -24,7 +24,7 @@ class AddressesController < ApplicationController
 
   private
 
-  def address_params
+  def post_params
     params.require(:address).permit(:address, :new_address, :certificate). merge(user_id: current_user.id)
   end
 

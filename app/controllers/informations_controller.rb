@@ -15,6 +15,19 @@ class InformationsController < ApplicationController
     end
   end
 
+  def edit
+    @information = Information.find_by(user_id: current_user.id)
+  end
+
+  def update
+    @information = Information.find_by(user_id: current_user.id)
+    if @information.update(post_params)
+      redirect_to root_path
+    else
+      redirect_to edit_information_path
+    end
+  end
+
 
   private
 
