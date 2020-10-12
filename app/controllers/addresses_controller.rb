@@ -13,7 +13,7 @@ class AddressesController < ApplicationController
   def update
     @address = Address.find_by(user_id: current_user.id)
     if @address.update(address_params)
-      redirect_to root_path
+      redirect_to new_image_path
     else
       redirect_to edit_address_path
     end
