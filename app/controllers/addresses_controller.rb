@@ -7,9 +7,16 @@ class AddressesController < ApplicationController
   end
 
   def edit
+    @address = Address.find_by(user_id: current_user.id)
   end
 
   def update
+    @address = Address.find_by(user_id: current_user.id)
+    if @address.update(address_params)
+      redirect_to root_path
+    else
+      redirect_to edit_address_path
+    end
   end
 
   def create
@@ -17,7 +24,7 @@ class AddressesController < ApplicationController
 
   private
 
-  def post_params
+  def address_params
     params.require(:address).permit(:address, :new_address, :certificate). merge(user_id: current_user.id)
   end
 

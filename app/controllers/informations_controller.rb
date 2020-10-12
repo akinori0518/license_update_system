@@ -8,7 +8,7 @@ class InformationsController < ApplicationController
 
     if @information.save
       flash[:notice] = '連絡先を登録しました'
-      redirect_to new_image_path
+      redirect_to address_path(current_user.id)
     else
       flash[:notice] = '未入力の項目があります'
       redirect_to new_information_path

@@ -7,8 +7,8 @@ class ImagesController < ApplicationController
     @image = Image.new(post_params)
 
     if @image.save
-      flash[:notice] = '連絡先を登録しました'
-      redirect_to address_path(current_user.id)
+      flash[:notice] = '画像を登録しました'
+      redirect_to root_path
     else
       flash[:notice] = '未入力の項目があります'
       redirect_to new_image_path
