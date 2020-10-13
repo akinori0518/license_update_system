@@ -4,7 +4,7 @@
   = form_with model: @address, class: 'edit_address_form', local: true do |f|
     .form
       .label 新しい住所
-      = f.text_field :new_address, placeholder: '全て全角。例）東京都千代田区永田町１−１−１ー１０１', class:"input-address"
+      = f.text_field :address, placeholder: '全て全角。例）東京都千代田区永田町１−１−１ー１０１', class:"input-address"
     .form
       .label 新住所を証明できる公的証明書を添付してください。
       = f.file_field :certificate

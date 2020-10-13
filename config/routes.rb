@@ -3,8 +3,8 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  resources :informations, only: [:new, :create]
-  resources :images, only: [:new, :create]
+  resources :informations, only: [:new, :create, :edit, :update]
+  resources :images, only: [:new, :create, :show, :edit, :update]
   resources :addresses, only: [:new, :create, :show, :edit, :update]
   
 end

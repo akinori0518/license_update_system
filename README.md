@@ -14,12 +14,8 @@
 |Column|Type|Options|
 |------|----|-------|
 |user_id|references|null:false, foreign_key:true|
-|prefecture|string|null:false|
-|city|string|null:false|
-|block|string|null:false|
-|new_prefecture|string||
-|new_city|string||
-|new_block|string||
+|address|string|null:false|
+|certificate|string|null:false|
 ### Association
 - belongs_to :user
 
@@ -40,7 +36,7 @@
 ### Association
 - belongs_to :user
 
-## Cardsテーブル
+## Paymentsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |user_id|references|null:false, foreign_key:true|

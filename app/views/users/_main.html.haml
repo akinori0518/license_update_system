@@ -2,33 +2,28 @@
   .form_box
     .title
       住所
-    .input
-      東京都豊島区東池袋２−６−１−７０３
+    = @address.address
     .button
-      変更する
-    .additional_data
-      ※変更する場合は有効な公的証明書のデータを添付してください。
-    .button
-      添付
-
+      = link_to edit_address_path(current_user.id) do
+        変更する
   .form_box
     .title
       顔写真
-    .input
-      撮影から6ヶ月以内のデータを添付してください。
+    = @image.image
     .button
-      添付
-
+      = link_to edit_image_path(current_user.id) do
+        変更する
   .form_box
     .title
       Eメールアドレス
-    .input
-      aaa@aaa.com
+    = @information.email
     .title
       電話番号
-    .input
-      09011111111
+    = @information.phone_number
+    .button
+      = link_to edit_information_path(current_user.id) do
+        変更する
   
   .submit
-    登録する
-      
+    = link_to "" do
+      手数料支払いへ
