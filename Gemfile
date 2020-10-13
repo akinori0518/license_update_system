@@ -70,3 +70,5 @@ gem 'devise-i18n-views'
 
 gem 'carrierwave'
 gem 'rmagick'
+
+gem 'payjp'
