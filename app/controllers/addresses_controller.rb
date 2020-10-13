@@ -13,7 +13,7 @@ class AddressesController < ApplicationController
   def update
     @address = Address.find_by(user_id: current_user.id)
     if @address.update(post_params)
-      redirect_to new_image_path
+      redirect_to image_path(current_user.id)
     else
       redirect_to edit_address_path
     end

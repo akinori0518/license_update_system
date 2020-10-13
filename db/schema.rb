@@ -15,7 +15,6 @@ ActiveRecord::Schema.define(version: 2020_10_11_130019) do
   create_table "addresses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "user_id"
     t.string "address", null: false
-    t.string "new_address", null: false
     t.string "certificate", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

@@ -28,6 +28,14 @@ class ImagesController < ApplicationController
     end
   end
 
+  def show
+    image = Image.find_by(user_id: current_user.id)
+    if image.blank?
+      redirect_to new_image_path
+    else
+      @image = Image.find_by(user_id: current_user.id)
+    end
+  end
 
   private
 
