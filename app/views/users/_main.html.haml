@@ -9,7 +9,7 @@
   .form_box
     .title
       顔写真
-    = @image.image
+    = image_tag("#{@image.image.url}", size: '120x120', class: 'img__img')
     .button
       = link_to edit_image_path(current_user.id) do
         変更する
@@ -23,7 +23,8 @@
     .button
       = link_to edit_information_path(current_user.id) do
         変更する
-  
-  .submit
-    = link_to user_path(current_user.id) do
-      手数料支払いへ
+  .form_box
+    .submit
+      = link_to user_path(current_user.id) do
+        手数料支払いへ
+      

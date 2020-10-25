@@ -2,14 +2,14 @@
 = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
   .field
     .label 氏名
-    = f.text_field :username, autofocus: true, autocomplete: "username", placeholder: '全角で入力。姓と名の間に１文字スペースあける。　　例）山田　太郎', maxlength: "16"
+    = f.text_field :username, autofocus: true, autocomplete: "username", placeholder: '全角で入力。姓と名の間に１文字スペースあける。　　例）山田　太郎', maxlength: "16", class: "input"
   .field
     .label 免許番号
-    = f.password_field :password, autocomplete: "current-password", placeholder: '半角で入力。　例）111122223333', maxlength: "12"
+    = f.password_field :password, autocomplete: "current-password", placeholder: '半角で入力。　例）111122223333', maxlength: "12", class: "input"
   - if devise_mapping.rememberable?
     .field
       = f.check_box :remember_me
       = f.label :remember_me
   .actions
-    = f.submit "Log in"
+    = f.submit "Log in", class: "button"
 = render "users/shared/links"
