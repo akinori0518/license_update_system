@@ -4,9 +4,9 @@
   = form_with model: @information, class: 'edit_information_form', local: true do |f|
     .form
       .label Eメールアドレス
-      = f.email_field :email, placeholder: 'PC・携帯どちらでも可', class:"input-information"
+      = f.email_field :email, placeholder: 'PC・携帯どちらでも可', class:"input"
     .form
       .label 電話番号
-      = f.text_field :phone_number, placeholder: "半角入力。ハイフンなし　例）08012345678", class:"input-information"
+      = f.text_field :phone_number, placeholder: "半角入力。ハイフンなし　例）08012345678", class:"input"
     .actions
       = f.submit "登録"
