@@ -3,7 +3,7 @@
 .address
   = form_with model: @image, class: 'show_image_form', local: true do |f|
     .form
-      = @image.image
+      = image_tag("#{@image.image.url}", size: '120x120', class: 'img__img')
     .actions
       = link_to root_path do
         最終確認へ
